@@ -8,3 +8,6 @@ Operations included :-
 
 **NOTE**
 User can use multiple operations simulataneously.
+
+![](images/screenshot%201.png)
+![](images/screenshot%202.png)
