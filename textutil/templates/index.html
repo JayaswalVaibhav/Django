@@ -41,6 +41,7 @@
     </div>
 
     <div class="container" style="background-color: lightgrey;">
+        <!-- csrf token is provided by Django for security from cross site request forgery-->
         <form action="/analyze", method="post"> {% csrf_token %}
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label mt-2">Enter your text</label>
