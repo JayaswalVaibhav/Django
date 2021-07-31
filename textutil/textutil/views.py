@@ -26,14 +26,14 @@ def analyze(request):
         for char in djtext:
             if char not in punc:
                 analyzed = ''.join((analyzed, char))
-        params = {'purpose': 'Remove Punctuation', 'analyze_text': analyzed, 'charcount': charcount}
+        params = {'analyze_text': analyzed, 'charcount': charcount}
         djtext = analyzed
         # return render(request, 'analyze.html', params)
 
     # if user wants the text in uppercase
     if fullcaps == "on":
         analyzed = djtext.upper()
-        params = {'purpose': 'Changed to uppercase', 'analyze_text': analyzed, 'charcount': charcount}
+        params = {'analyze_text': analyzed, 'charcount': charcount}
         djtext = analyzed
         # return render(request, 'analyze.html', params)
 
@@ -44,15 +44,14 @@ def analyze(request):
         for char in djtext:
             if char != '\n' and char != '\r':
                 analyzed = ''.join((analyzed, char))
-        params = {'purpose': 'New Line remove', 'analyze_text': analyzed, 'charcount': charcount}
+        params = {'analyze_text': analyzed, 'charcount': charcount}
         djtext = analyzed
         # return render(request, 'analyze.html', params)
 
     # if user wants character count
     if charcount == 'on':
         analyzed = djtext
-        params = {'purpose': 'Character count',
-                  'analyze_text': analyzed,
+        params = {'analyze_text': analyzed,
                   'charcount': charcount,
                   'char_count': len(analyzed)}
         # return render(request, 'analyze.html', params)
