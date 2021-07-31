@@ -1,4 +1,4 @@
-'#'TextUtils
+# TextUtils
 It is a text utility build in Django(Python) which takes text as input and performs different operations based on user's input.
 Operations included :-
 1. Remove the punctuations from the text
